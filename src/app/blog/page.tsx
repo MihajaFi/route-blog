@@ -1,6 +1,16 @@
+import { Menu } from "@/components/blog";
 
-const page  = () => {
-  return <div>page</div>;
-};
 
-export default page;
+
+export default function BlogLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <div>
+      <Menu />
+      {children}
+    </div>
+  );
+}
